@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Profile from "./components/Profile";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import './index.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  
+  // Click to create CV
+  onClick = (e) => {
+    e.preventDefault();
+    console.log('clicked!');
+  }
+
+  render() {
+    return (
+      <form id="form">
+        <h1>Create CV</h1>
+        <Profile />
+        <Experience />
+        <Education />
+        <button type="submit" onClick={this.onClick}>Create CV</button>
+      </form>
+    )
+  }
 }
 
 export default App;
