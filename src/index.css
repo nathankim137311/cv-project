@@ -6,7 +6,7 @@
 
 body {
     height: 100vh;
-    background-color: #202020;
+    background-color: #01395E;
     color: white;
 }
 
@@ -26,10 +26,9 @@ form {
 }
 
 form h1 {
-    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.35em;
 }
 
 form button {
@@ -41,6 +40,15 @@ form button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     height: 30px;
     width: 30%;
+    transition: all .05s ease;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+form button:active {
+    scale: 1.05;
 }
 
 .form-control-container {
@@ -52,6 +60,7 @@ form button {
 
 .form-control-container h1 {
     font-size: 1.1em;
+    margin-top: 20px;
 }
 
 .form-control {
@@ -72,11 +81,24 @@ form button {
 .form-control textarea {
     border: none;
     width: 400px;
-    padding: 0px;
+    padding: 5px;
 }
 
 .form-control.description {
     align-items: flex-start;
+}
+
+.form-control.image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.form-control.image input {
+    padding: 0px;
+    width: 175px;
+    height: fit-content;
 }
 
 .form-control.date {
@@ -91,5 +113,6 @@ form button {
     width: fit-content;
     padding: 0px;
 }
+
 
 

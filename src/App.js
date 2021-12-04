@@ -2,24 +2,41 @@ import React, { Component } from "react";
 import Profile from "./components/Profile";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-import './index.css';
 
 class App extends Component {
-  
-  // Click to create CV
-  onClick = (e) => {
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstName: '',
+      lastName: '',
+      jobTitle: '',
+      description: '', 
+    }
+  }
+
+  handleCallback(parent, e) {
+    parent.setState({ [e.target.name]: e.target.value }, () => {
+      if (parent.props.onChange) {
+          parent.props.onChange(parent.state);
+      }
+    });
+  }
+
+  handleSubmit(e) {
     e.preventDefault();
-    console.log('clicked!');
+    console.log(JSON.stringify(this.state));
   }
 
   render() {
+    const {data} = this.state;
     return (
-      <form id="form">
+      <form id="form" onSubmit={this.handleSubmit}>
         <h1>Create CV</h1>
-        <Profile />
+        <Profile parentCallback = {this.handleCallback} />
+        {data}
         <Experience />
         <Education />
-        <button type="submit" onClick={this.onClick}>Create CV</button>
+        <button type="submit">Create CV</button>
       </form>
     )
   }
