@@ -1,23 +1,6 @@
 import { Component } from 'react'
 
 class Experience extends Component {
-    constructor() {
-        super()
-        this.state = {
-          jobPosition: '',
-          companyName: '',
-          startDate: '',
-          endDate: '', 
-        }
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-        console.log(this.state);
-    }
-
     render() {
         return (
             <form id="form">
@@ -37,11 +20,11 @@ class Experience extends Component {
                     </div>
                     <div className="form-control date">
                         <label htmlFor="start-date">Start</label>
-                        <input type="date" id="start-date" name="startDate"  
+                        <input type="date" id="start-date" name="companyStartDate"  
                         onChange={this.handleChange}
                         />
                         <label htmlFor="end-date">End</label>
-                        <input type="date" id="end-date" name="endDate" 
+                        <input type="date" id="end-date" name="companyEndDate" 
                         onChange={this.handleChange}
                         />
                     </div>

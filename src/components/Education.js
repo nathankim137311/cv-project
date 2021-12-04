@@ -1,24 +1,6 @@
 import { Component } from 'react'
 
 class Education extends Component { 
-    constructor() {
-        super()
-        this.state = {
-          university: '',
-          city: '',
-          degree: '',
-          startDate: '',
-          endDate: '', 
-        }
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-        console.log(this.state);
-    }
-
     render() {
         const stylingObject = {
             button: {

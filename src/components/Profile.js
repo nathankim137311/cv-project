@@ -1,29 +1,6 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 
 class Profile extends Component {
-    constructor() {
-        super()
-        this.state = {
-          firstName: '',
-          lastName: '',
-          jobTitle: '',
-          description: '', 
-          imgUrl: '', 
-        }
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-        console.log(this.state);
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('submit button clicked!'); 
-    }
-    
     render() {
         return (
             <form id="form" onSubmit={this.handleSubmit}>
