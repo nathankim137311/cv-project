@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-form {
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,101 +18,141 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 32%;
-    padding: 25px 35px 25px 35px;
     border-radius: 5px;
     background-color: #2F3136;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-form h1 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.35em;
-}
-
-form button {
-    margin-top: 20px;
-    border: none;
-    border-radius: 3px;
-    background-color: #5865F2;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    height: 30px;
+    height: fit-content;
     width: 30%;
-    transition: all .05s ease;
+    padding: 40px;
 }
 
-form button:hover {
+/* left and right arrows  */
+.arrow {
+    border: none;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.arrow:hover {
     cursor: pointer;
 }
 
-form button:active {
-    scale: 1.05;
+.arrow.back {
+    position: absolute;
+    top: 45px;
+    left: 10%;
+}
+
+.arrow.forward {
+    position: absolute;
+    top: 45px;
+    right: 10%;
+}
+
+/* main form  */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .form-control-container {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 100%;
-    border-bottom: 1px white dashed;
 }
 
-.form-control-container h1 {
-    font-size: 1.1em;
-    margin-top: 20px;
+/* submit button  */
+.submit-btn {
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    height: 40px;
+    width: 30%;
+    font-size: 1rem;
+    background-color: #5865F2;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all .05s ease;
 }
 
+.submit-btn:hover {
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    scale: 1.05;
+}
+
+/* individual input fields  */
 .form-control {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.25rem;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
+.form-control-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 .form-control input {
-    border: none;
-    height: 20px;
-    width: 400px;
     padding: 5px;
+    height: 35px;
+    width: 70%;
+    font-size: 1rem;
+    border: none;
+    margin-left: 10px;
 }
 
 .form-control textarea {
-    border: none;
-    width: 400px;
     padding: 5px;
+    height: 70px;
+    width: 70%;
+    font-size: 1rem;
+    border: none;
 }
 
 .form-control.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .form-control.image {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .form-control.image input {
-    padding: 0px;
-    width: 175px;
-    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    width: 200px;
 }
 
+/* Experience */
 .form-control.date {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
-
 .form-control.date input {
-    width: fit-content;
-    padding: 0px;
+    width: 30%;
 }
-
-
 
