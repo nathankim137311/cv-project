@@ -9,7 +9,7 @@ class Education extends Component {
             }
         } 
         return (
-            <form id="form">
+            <form id="form" onSubmit={this.props.handleSubmit}>
                 <div className="form-control-container">
                     <h1>Education</h1>
                     <div className="form-control">

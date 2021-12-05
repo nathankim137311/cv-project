@@ -29,7 +29,7 @@ class Experience extends Component {
                         />
                     </div>
                 </div>
-                <button className="submit-btn" type="submit">Next</button>
+                <button className="submit-btn" type="submit" onClick={this.props.nextForm}>Next</button>
             </form>
         ) 
     }

@@ -8,6 +8,32 @@ body {
     height: 100vh;
     background-color: #01395E;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
 }
 
 .form-container {
