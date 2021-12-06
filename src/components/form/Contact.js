@@ -22,7 +22,7 @@ class Contact extends Component {
                     </div>
                     <div className="form-control">
                         <label htmlFor="website">Website</label>
-                        <input type="text" id="website" name="website" value={this.props.state.website} onChange={this.props.handleChange} />
+                        <input type="text" id="website" name="website" value={this.props.state.website} placeholder="Optional" onChange={this.props.handleChange} />
                     </div>
                 </div>
                 <button style={stylingObject.button} className="submit-btn" onClick={this.props.nextForm}>Create</button>

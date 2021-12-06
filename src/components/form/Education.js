@@ -3,7 +3,7 @@ import { Component } from 'react'
 class Education extends Component { 
     render() {
         return (
-            <form id="form" onSubmit={this.props.handleSubmit}>
+            <form id="form">
                 <div className="form-control-container">
                     <h1>Education</h1>
                     <div className="form-control">
@@ -35,7 +35,7 @@ class Education extends Component {
                         />
                     </div>
                 </div>
-                <button className="submit-btn" type="submit">Next</button>
+                <button className="submit-btn" onClick={this.props.nextForm}>Next</button>
             </form>
         ) 
     }

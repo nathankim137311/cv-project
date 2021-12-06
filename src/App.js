@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "./components/form/Form";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Cv from "./components/Cv";
 
 class App extends Component {
   constructor() {
@@ -36,6 +37,9 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({
+      index: this.state.index + 1
+    });
     console.log(this.state); 
   }
 
@@ -60,13 +64,30 @@ class App extends Component {
   }
 
   render() {
-    return (
+    if (this.state.index === 5) {
+      return (
       <>
-        <Header/>
-        <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleImage={this.handleImage} prevForm={this.prevForm} nextForm={this.nextForm} state={this.state} />
-        <Footer />
+      <Header/>
+      <Cv state={this.state} />
+      <Footer />
       </>
-    )
+      )
+    } else {
+      return (
+        <>
+        <Header/>
+        <Form 
+        handleChange={this.handleChange} 
+        handleSubmit={this.handleSubmit} 
+        handleImage={this.handleImage} 
+        prevForm={this.prevForm} 
+        nextForm={this.nextForm} 
+        state={this.state} 
+        />
+        <Footer />
+        </>
+      )
+    } 
   }
 }
 
