@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Profile from "./Profile.js";
 import Experience from "./Experience.js";
 import Education from "./Education.js";
+import Contact from './Contact.js';
 import ArrowBack from "@material-ui/icons/ArrowBackIos"
 import ArrowForward from "@material-ui/icons/ArrowForwardIos"
 
@@ -16,7 +17,8 @@ class Form extends Component {
               nextForm={this.props.nextForm} 
               prevForm={this.props.prevForm} 
               state={this.props.state} 
-              handleImage={this.props.handleImage}/>
+              handleImage={this.props.handleImage}
+              />
               <button className="arrow back" onClick={this.props.prevForm}><ArrowBack /></button>
               <button className="arrow forward" onClick={this.props.nextForm}><ArrowForward /></button>
             </div>
@@ -27,7 +29,9 @@ class Form extends Component {
               <Experience 
               handleChange={this.props.handleChange} 
               nextForm={this.props.nextForm} 
-              prevForm={this.props.prevForm} />
+              prevForm={this.props.prevForm} 
+              state={this.props.state} 
+              />
               <button className="arrow back" onClick={this.props.prevForm}><ArrowBack /></button>
               <button className="arrow forward" onClick={this.props.nextForm}><ArrowForward /></button>
             </div>
@@ -37,9 +41,24 @@ class Form extends Component {
             <div className="form-container">
               <Education 
               handleChange={this.props.handleChange} 
+              nextForm={this.props.nextForm} 
+              prevForm={this.props.prevForm}
+              state={this.props.state} 
+              />
+              <button className="arrow back" onClick={this.props.prevForm}><ArrowBack /></button>
+              <button className="arrow forward" onClick={this.props.nextForm}><ArrowForward /></button>
+            </div>
+          );
+        case 4:
+          return (
+            <div className="form-container">
+              <Contact 
+              handleChange={this.props.handleChange} 
               handleSubmit={this.props.handleSubmit} 
               nextForm={this.props.nextForm} 
-              prevForm={this.props.prevForm}/>
+              prevForm={this.props.prevForm}
+              state={this.props.state}
+              />
               <button className="arrow back" onClick={this.props.prevForm}><ArrowBack /></button>
               <button className="arrow forward" onClick={this.props.nextForm}><ArrowForward /></button>
             </div>

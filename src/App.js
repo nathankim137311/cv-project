@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Form from "./components/form/Form";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Cv from "./components/Cv";
 
 class App extends Component {
   constructor() {
@@ -22,6 +21,9 @@ class App extends Component {
       degree: '',
       universityStartDate: '',
       universityEndDate: '', 
+      phone: '',
+      email: '',
+      website: '',
       index: 1, 
     }
   }
@@ -46,13 +48,13 @@ class App extends Component {
   }
 
   prevForm = () => {
-    if (this.state.index <= 3 && this.state.index > 1) {
+    if (this.state.index <= 4 && this.state.index > 1) {
       this.setState({index: this.state.index - 1}); 
     }
   }
 
   nextForm = () => {
-    if (this.state.index < 3) {
+    if (this.state.index < 4) {
       this.setState({index: this.state.index + 1});
     }
   }
@@ -62,7 +64,6 @@ class App extends Component {
       <>
         <Header/>
         <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleImage={this.handleImage} prevForm={this.prevForm} nextForm={this.nextForm} state={this.state} />
-        {/* <Cv state={this.state} /> */}
         <Footer />
       </>
     )
