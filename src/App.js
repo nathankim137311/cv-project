@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Form from "./components/Form";
+import Form from "./components/form/Form";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Cv from "./components/Cv";
 
 class App extends Component {
   constructor() {
@@ -61,6 +62,7 @@ class App extends Component {
       <>
         <Header/>
         <Form handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleImage={this.handleImage} prevForm={this.prevForm} nextForm={this.nextForm} state={this.state} />
+        {/* <Cv state={this.state} /> */}
         <Footer />
       </>
     )
