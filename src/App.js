@@ -26,6 +26,7 @@ class App extends Component {
       email: '',
       website: '',
       index: 1, 
+      showCv: false,
     }
   }
 
@@ -38,7 +39,8 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      index: this.state.index + 1
+      index: this.state.index + 1,
+      showCv: true
     });
     console.log(this.state); 
   }
@@ -63,12 +65,22 @@ class App extends Component {
     }
   }
 
+  editForm = () => {
+    this.setState({
+      showCv: false, 
+      index: 1,
+    });
+  }
+
   render() {
-    if (this.state.index === 5) {
+    if (this.state.showCv === true) {
       return (
       <>
       <Header/>
-      <Cv state={this.state} />
+      <Cv 
+      state={this.state} 
+      editForm={this.editForm}
+      />
       <Footer />
       </>
       )
@@ -81,7 +93,7 @@ class App extends Component {
         handleSubmit={this.handleSubmit} 
         handleImage={this.handleImage} 
         prevForm={this.prevForm} 
-        nextForm={this.nextForm} 
+        nextForm={this.nextForm}
         state={this.state} 
         />
         <Footer />

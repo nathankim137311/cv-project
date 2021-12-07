@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
 
 class Cv extends Component {
+    constructor() {
+        super()
+        this.state = {
+            showOverlay: false,
+        }
+    }
+
+    showEditOverlay = () => {
+        this.setState({
+            showOverlay: true,
+        });
+    }
+
+    removeEditOverlay = () => {
+        this.setState({
+            showOverlay: false, 
+        });
+    }
+
     render() {
         return (
-            <div className="cv-container">
+            <>
+                {this.state.showOverlay && <button id="edit-btn" onMouseEnter={this.showEditOverlay}onClick={this.props.editForm}>Edit</button>}
+            <div className={"cv-container " + (this.state.showOverlay ? "overlay" : "")} onMouseEnter={this.showEditOverlay} onMouseLeave={this.removeEditOverlay}>
+                {/* Cv page  */}
                 <div className="heading-container">
                     <div className="heading">
                         <h1>
@@ -53,6 +75,7 @@ class Cv extends Component {
                     </div>
                 </div>
             </div>
+            </>
         )
     };
 }

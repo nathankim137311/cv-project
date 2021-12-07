@@ -25,7 +25,7 @@ class Contact extends Component {
                         <input type="text" id="website" name="website" value={this.props.state.website} placeholder="Optional" onChange={this.props.handleChange} />
                     </div>
                 </div>
-                <button style={stylingObject.button} className="submit-btn" onClick={this.props.nextForm}>Create</button>
+                <button style={stylingObject.button} className="submit-btn">Create</button>
             </form>
         )
     }; 

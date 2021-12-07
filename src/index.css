@@ -197,6 +197,13 @@ form {
     padding: 20px;
     background-color: #ffffff;
     color: #202020;
+    transition: all 0.25s ease; 
+    z-index: 1;
+}
+
+/* add animation */
+.cv-container.overlay {
+    opacity: 0.5;
 }
 
 .heading-container {
@@ -292,3 +299,21 @@ form {
 .content-list.profile {
     margin-bottom: 150px;
 }
+
+#edit-btn {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 150px;
+    height: 35px;
+    background-color: #5865F2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#edit-btn:hover {
+    cursor: pointer;
+}
+
