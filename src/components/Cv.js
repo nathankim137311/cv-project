@@ -23,7 +23,7 @@ class Cv extends Component {
     render() {
         return (
             <>
-                {this.state.showOverlay && <button id="edit-btn" onMouseEnter={this.showEditOverlay}onClick={this.props.editForm}>Edit</button>}
+            {this.state.showOverlay && <button id="edit-btn" onMouseEnter={this.showEditOverlay} onClick={this.props.editForm}>Edit</button>}
             <div className={"cv-container " + (this.state.showOverlay ? "overlay" : "")} onMouseEnter={this.showEditOverlay} onMouseLeave={this.removeEditOverlay}>
                 {/* Cv page  */}
                 <div className="heading-container">
