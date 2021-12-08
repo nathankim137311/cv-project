@@ -18,6 +18,11 @@ class Experience extends Component {
                         onChange={this.props.handleChange}
                         />
                     </div>
+                    <div className="form-control description">
+                        <label htmlFor="company-duties">Duties</label>
+                        <textarea id="company-duties" name="companyDuties" value={this.props.state.companyDuties} 
+                        onChange={this.props.handleChange}></textarea>
+                    </div>
                     <div className="form-control date">
                         <label htmlFor="start-date">Start</label>
                         <input type="date" id="start-date" name="companyStartDate" value={this.props.state.companyStartDate}  

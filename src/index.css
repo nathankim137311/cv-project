@@ -211,7 +211,6 @@ form {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: red 1px solid;
     height: fit-content;
     width: 100%;
     height: 35%;
@@ -232,8 +231,9 @@ form {
 }
 
 .heading span {
-    font-size: 1.5rem;
-    letter-spacing: 15px;
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+    width: fit-content;
 }
 
 .heading-container img {
@@ -249,26 +249,20 @@ form {
     flex-direction: row;
     width: 100%;
     height: 65%;
-    border: 1px solid red;
 }
 
 .main-container h2 {
     font-size: 1.5rem;
     font-weight: normal;
     width: 200px;
-    margin-left: 10px;
+    margin-bottom: 10px;
     height: 30px;
     border-bottom: 1px black dashed;
-}
-
-.main-container span {
-    font-size: 1.1rem;
 }
 
 .content-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
 }
 
 .container-1 {
@@ -288,6 +282,16 @@ form {
     list-style-type: square;
     list-style-position: outside;
     margin-left: 20px;
+    padding: 10px;
+}
+
+.content-list.experience {
+    margin-bottom: 50px;
+}
+
+.content-list.contact li {
+    line-height: 2rem;
+    font-size: 1.1rem;
 }
 
 .content-list li div {
@@ -296,10 +300,21 @@ form {
     height: fit-content;
 }
 
+.content-list span {
+    font-size: 1.1rem;
+}
+
+.content-list p {
+    margin-block: 10px;
+    width: 300px;
+    text-align: justify;
+}
+
 .content-list.profile {
     margin-bottom: 150px;
 }
 
+/* edit button */
 #edit-btn {
     position: absolute;
     top: 10%;
@@ -316,4 +331,5 @@ form {
 #edit-btn:hover {
     cursor: pointer;
 }
+
 

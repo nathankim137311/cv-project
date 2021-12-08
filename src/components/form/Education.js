@@ -24,13 +24,18 @@ class Education extends Component {
                         onChange={this.props.handleChange}
                         />
                     </div>
+                    <div className="form-control description">
+                        <label htmlFor="university-duties">Duties</label>
+                        <textarea id="university-duties" name="universityDuties" value={this.props.state.universityDuties} 
+                        onChange={this.props.handleChange}></textarea>
+                    </div>
                     <div className="form-control date">
                         <label htmlFor="start-date">Start</label>
-                        <input type="date" id="start-date" name="startDate" value={this.props.state.universityStartDate}  
+                        <input type="date" id="start-date" name="universityStartDate" value={this.props.state.universityStartDate}  
                         onChange={this.props.handleChange}
                         />
                         <label htmlFor="end-date">End</label>
-                        <input type="date" id="end-date" name="endDate" value={this.props.state.universityEndDate} 
+                        <input type="date" id="end-date" name="universityEndDate" value={this.props.state.universityEndDate} 
                         onChange={this.props.handleChange}
                         />
                     </div>

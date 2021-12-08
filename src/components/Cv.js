@@ -42,34 +42,39 @@ class Cv extends Component {
                             <h2 className="content-heading">Experience</h2>
                                 <li>
                                     <div>
-                                    <span>{this.props.state.jobPosition}</span>
-                                    <span>{this.props.state.companyName}</span>
+                                    <span>{`${this.props.state.jobPosition} at ${this.props.state.companyName}`}</span>
+                                    <small>{`(${this.props.state.companyStartDate} - ${this.props.state.companyEndDate})`}</small>
+                                    <p>{this.props.state.companyDuties}</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div className="education-container">
-                            <h2 className="content-heading">Education</h2>
                             <ul className="content-list education">
-                                <li></li>
+                            <h2 className="content-heading">Education</h2>
+                                <li>
+                                    <div>
+                                    <span>{`Student at ${this.props.state.university}`}</span>
+                                    <small>{`(${this.props.state.universityStartDate} - ${this.props.state.universityEndDate})`}</small>
+                                    <p>{this.props.state.universityDuties}</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div className="content-container container-2">
                         <div>
-                            <h2>Profile</h2>
                             <ul className="content-list profile">
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                            <h2 className="content-heading">Profile</h2>
+                                <li>{this.props.state.description}</li>
                             </ul>
                         </div>
                         <div>
-                            <h2>Contact</h2>
                             <ul className="content-list contact">
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                            <h2 className="content-heading">Contact</h2>
+                                <li>{this.props.state.phone}</li>
+                                <li>{this.props.state.email}</li>
+                                <li>{this.props.state.website}</li>
                             </ul>
                         </div>
                     </div>
