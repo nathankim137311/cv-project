@@ -21,7 +21,6 @@ body {
     width: 575px;
     height: 800px;
     background-color: white;
-    color: #202020;
 }
 
 .cv-container input, textarea {
@@ -31,12 +30,95 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: row;
     background-color: #4AC6BB;
-    height: 150px;
+    height: 180px;
     padding: 20px;
 }
 
+header h1, input {
+    color: white;
+    width: 100px;
+}
+
+.img-container {
+    border: white 1px solid;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 210px;
+    padding: 10px;
+}
+
+.heading-container input {
+    font-size: 2rem;
+    width: 150px;
+    margin-left: 20px;
+}
+
+#job-title {
+    font-size: 1.5rem;
+    color: grey;
+    letter-spacing: 5px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+}
+
+.contact-container input {
+    width: 130px;
+}
+
+.contact-list {
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
 .cv-main-container {
-    padding: 20px;
+    padding: 20px 30px 20px 30px;
+    border: red 1px solid;
+    height: 100%;
+}
+
+.content-container {
+    
+    height: 120px;
+    margin-block: 25px;
+    padding: 10px;
+}
+
+.content-container input {
+    font-size: 1rem;
+    color: #202020;
+}
+
+.content-container textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.experience-container {
+    border-left: #F3775F 20px solid;
+}
+
+.education-container {
+    border-left: #F8AD85 20px solid;
 }
 

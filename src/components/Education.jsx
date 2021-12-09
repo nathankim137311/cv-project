@@ -16,49 +16,52 @@ export default function Education() {
     }
 
     return (
-        <>
-            <input 
-            type="text" 
-            id="university"
-            name="university"
-            value={education.university}
-            onChange={handleEducationChange}
-            />
-            <input 
-            type="text" 
-            id="city"
-            name="city"
-            value={education.city}
-            onChange={handleEducationChange}
-            />
-            <input 
-            type="text" 
-            id="degree"
-            name="degree"
-            value={education.degree}
-            onChange={handleEducationChange}
-            />
-            <input 
-            type="text" 
+        <div className="content-container education-container">
+            <div>
+                <input 
+                type="text" 
+                id="university"
+                name="university"
+                value={education.university}
+                onChange={handleEducationChange}
+                />
+                <input 
+                type="text" 
+                id="city"
+                name="city"
+                value={education.city}
+                onChange={handleEducationChange}
+                />
+                <input 
+                type="text" 
+                id="degree"
+                name="degree"
+                value={education.degree}
+                onChange={handleEducationChange}
+                />
+            </div>
+            <div>
+                <input 
+                type="text" 
+                id="university-start-date"
+                name="universityStartDate"
+                value={education.universityStartDate}
+                onChange={handleEducationChange}
+                />
+                <input 
+                type="text" 
+                id="university-end-date"
+                name="universityEndDate"
+                value={education.universityEndDate}
+                onChange={handleEducationChange}
+                />
+            </div>
+            <textarea  
             id="universityDuties"
             name="universityDuties"
             value={education.universityDuties}
             onChange={handleEducationChange}
             />
-            <input 
-            type="text" 
-            id="university-start-date"
-            name="universityStartDate"
-            value={education.universityStartDate}
-            onChange={handleEducationChange}
-            />
-            <input 
-            type="text" 
-            id="university-end-date"
-            name="universityEndDate"
-            value={education.universityEndDate}
-            onChange={handleEducationChange}
-            />
-        </>
+        </div>
     );
 }

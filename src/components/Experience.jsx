@@ -15,41 +15,45 @@ export default function Experience() {
     }
 
     return (
-        <>
-            <input 
-            type="text" 
-            id="company"
-            name="company"
-            value={workExperience.company}
-            onChange={handleExperienceChange}
-            />
-            <input 
-            type="text"
-            id="company-title"
-            name="companyTitle"
-            value={workExperience.companyTitle}
-            onChange={handleExperienceChange} 
-            />
+        <div className="content-container experience-container">
+            <div>
+                <input 
+                type="text" 
+                id="company"
+                name="company"
+                value={workExperience.company}
+                onChange={handleExperienceChange}
+                />
+                <input 
+                type="text"
+                id="company-title"
+                name="companyTitle"
+                value={workExperience.companyTitle}
+                onChange={handleExperienceChange} 
+                />
+            </div>
+            <div>
+                <input 
+                type="text"
+                id="company-start"
+                name="companyStart"
+                value={workExperience.companyStart}
+                onChange={handleExperienceChange} 
+                />
+                <input 
+                type="text"
+                id="company-end"
+                name="companyEnd"
+                value={workExperience.companyEnd}
+                onChange={handleExperienceChange} 
+                />
+            </div>
             <textarea 
             id="company-duties"
             name="companyDuties"
             value={workExperience.companyDuties}
             onChange={handleExperienceChange} 
             />
-            <input 
-            type="text"
-            id="company-start"
-            name="companyStart"
-            value={workExperience.companyStart}
-            onChange={handleExperienceChange} 
-            />
-            <input 
-            type="text"
-            id="company-end"
-            name="companyEnd"
-            value={workExperience.companyEnd}
-            onChange={handleExperienceChange} 
-            />
-        </>
+        </div>
     );
 }
