@@ -93,12 +93,11 @@ header h1, input {
 
 .cv-main-container {
     padding: 20px 30px 20px 30px;
-    border: red 1px solid;
     height: 100%;
 }
 
 .content-container {
-    
+
     height: 120px;
     margin-block: 25px;
     padding: 10px;
@@ -107,6 +106,7 @@ header h1, input {
 .content-container input {
     font-size: 1rem;
     color: #202020;
+    width: 100px;
 }
 
 .content-container textarea {
